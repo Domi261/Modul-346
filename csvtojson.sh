@@ -1,3 +1,5 @@
+# Autor: Alex Shahini
+# Datum: 20.12.2024
 #!/bin/bash
 
 set -e  # Bricht das Skript bei jedem Fehler ab
