@@ -131,7 +131,7 @@ Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis 
 
 ![aws_credentials](images/all_in_dir.png)
 
-Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
+- **Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.**
 
 Dies machen wir mit folgendem Befehl:
 
@@ -141,16 +141,17 @@ zip lambda_function.zip lambda_function.py
 ```
 ![aws_credentials](images/lambda_zippen.png)
 
-Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen
+- **Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen**
 
-1. **Ausführungsrechte setzen (falls noch nicht geschehen)**:
+Dies können wir mit chmod machen:
+
 ```bash
 chmod +x csvtojson.sh
 ```
 ------------------------------------------------------------
- ### Testing
+### Ausführen des Skripts
 
-1. Wir führen nun unser Skript mit:
+Wir führen nun unser Skript mit:
 ```
 /. csvtojson.sh
 ```
