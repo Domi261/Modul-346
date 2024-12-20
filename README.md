@@ -60,9 +60,9 @@ Unsere Credentials sind für uns im AWS Lab ersichtlich:
 
 ![aws_credentials](images/aws_lab_credentials.png)  
 
-Diese kopieren wir und raus und bearbeiten dann unser "credentials" File, welches sich im versteckten ordner ".aws" befindet.
+Diese kopieren wir und raus und bearbeiten dann unser "credentials" File, welches sich im versteckten Ordner ".aws" befindet.
 
-Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
+Mit einem Texteditor wie Nano oder einem ähnlichen Editor kopieren wir unsere Credentials rein.
 
 ![aws_credentials](images/nano_credentials.png)
 
@@ -109,7 +109,7 @@ pip3 --version
 #### 4. **Abhängigkeiten aus `requirements.txt` installieren**
 
 - **Installiere die Abhängigkeiten:**  
-Nutze pip, um die Pakete aus der `requirements.txt` zu installieren:
+Nutze pip, um die Pakete aus der `requirements.txt` Datei zu installieren:
 ```bash
 pip3 install -r requirements.txt
 ```
@@ -139,7 +139,6 @@ Dies machen wir mit folgendem Befehl:
 
 ```
 zip lambda_function.zip lambda_function.py
-
 ```
 ![aws_credentials](images/lambda_zippen.png)
 
@@ -166,7 +165,7 @@ Als erstes werden die 2 Buckets erstellt, wichtig zu beachten war hierbei, dass 
 
 **einmaligen** Namen bekommen, dies konnten wir mit der "TIMESTAMP=$" Variable bewerkstelligen.
 
-Im nächsten Schritt wird die Lambda Funktion in AWS erstellt und es werden die Lambda-Berechtigungen für den S3-Trigger hinzugefügt hinzugefügt.
+Im nächsten Schritt wird die Lambda Funktion in AWS erstellt und es werden die Lambda-Berechtigungen für den S3-Trigger hinzugefügt.
 
 Danach wir der S3-Trigger konfiguriert.
 
@@ -174,13 +173,13 @@ Das Skript nimmt dann unser "test1.csv" und lädt es in den Input-Bucket hoch.
 
 Im nächsten Schritt wird das CSV-File zu einem JSON-File konvertiert und in den Output-Bucket hochgeladen.
 
-Danach downloadet es für uns die fertige JSON-Datei namens "test1.json" und das Skript zeigt und schon die Datei mir korrekter Syntax an.
+Danach downloadet es für uns die fertige JSON-Datei namens "test1.json" und das Skript zeigt uns schon die Datei mit korrekter Syntax an.
 
 
 
 ![aws_credentials](images/script_explained.png)
 
-Nun könne wir noch validieren, ob das Skript wirklich alles gemacht hat:
+Nun können wir noch validieren, ob das Skript wirklich alles gemacht hat:
 
 Als erstes listen wir unsere Buckets auf:
 
@@ -192,4 +191,4 @@ Nun validieren wir noch unsere Funktion, hierbei können wir den Namen aus dem S
 
 ![aws_credentials](images/get_function.png)
 
-Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden und funktioniert so wie es sollte
+Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden und funktioniert so wie es sollte.
