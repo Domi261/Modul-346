@@ -145,7 +145,7 @@ Dafür geht man ins IAM-Dashboard rein.
 
 Beim Reiter Zugriffsverwaltung kann man dann auf "Rollen" klicken:
 
-![Rollen](images/Rollen.png)
+![Rollen](images/Rollen_fix.png)
 
 Nun werden sämtliche Rollen angezeigt.
 
