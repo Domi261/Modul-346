@@ -22,10 +22,10 @@ Es ist notwendig die folgenden Commands in der Konsole auszuführen.
 #### 1. **Repository klonen**
 Der erste Schritt besteht darin, das Repository zu klonen.
 ```bash
-git clone https://github.com/Logoko709/Modul346-Cloudloesungen-konzipieren-und-realisieren.git
+git clone https://github.com/Domi261/Modul-346.git
 ```
 ```bash
-cd Modul346-Cloudloesungen-konzipieren-und-realisieren
+cd Modul-346
 ```
 ---
 
