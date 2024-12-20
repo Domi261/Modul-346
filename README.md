@@ -246,9 +246,10 @@ Auch der Umgang mit den ARN-Rollen war eine Herausforderung, da diese bei jedem 
 
 ## **Reflexion Louis**
 
-Im Laufe des Projekts sind uns einige Herausforderungen begegnet, die wertvolle Erkenntnisse gebracht haben. Der Einsatz mehrerer Repositories führte dazu, dass anfängliche Änderungen verloren gingen, was uns gezeigt hat, wie wichtig ein klar definierter Workflow ist. Eine bessere Abstimmung hätte hier Zeit gespart und die Zusammenarbeit vereinfacht.
-Trotz einiger Hindernisse konnten wir viel lernen, vor allem im Bereich Automatisierung und Infrastruktur. Besonders die Arbeit mit AWS und das Erstellen von Skripten haben uns dabei geholfen, unsere Fähigkeiten zu erweitern.
-Für zukünftige Projekte nehmen wir uns vor, unsere Planung zu optimieren und klarere Prozesse zu definieren. Insgesamt sind wir zufrieden mit dem Ergebnis und freuen uns über die Erfahrungen, die wir während der Umsetzung gesammelt haben.
+Während des Projekts sind wir auf verschiedene Herausforderungen gestoßen, die uns wichtige Erkenntnisse gebracht haben. Der Umgang mit mehreren Repositories führte dazu, dass anfängliche Commits verloren gingen, was die Arbeit weniger transparent machte. Dies zeigte uns, wie wichtig eine einheitliche Struktur und klare Planung in der Versionsverwaltung ist.
+Ein weiteres Problem war die manuelle Konfiguration der ARN, die je nach Nutzer individuell ist. Hier wurde uns bewusst, dass automatisierte Lösungen Zeit und Aufwand sparen könnten.
+Trotz dieser Hürden konnten wir viel lernen, insbesondere über AWS, Linux und Automatisierung mit Skripten. Unser Bash-Skript erfüllte die Anforderungen zuverlässig, und wir konnten unser technisches Wissen deutlich erweitern.
+Für zukünftige Projekte nehmen wir uns vor, die Planungsphase sorgfältiger zu gestalten und mehr Zeit für Dokumentation und Tests einzuplanen. Insgesamt sind wir mit dem Ergebnis zufrieden und fühlen uns gut vorbereitet für kommende Herausforderungen.
 
 
 
