@@ -210,5 +210,10 @@ Rückblickend haben wir viel dazugelernt, insbesondere im Umgang mit AWS, Linux 
 
 **Reflexion Alex**
 
+## **Reflexion Alex**
+
+Als ich den Code geschrieben habe, stellte sich vor allem die Handhabung der dynamischen Output-Bucket-Namen als äusserst knifflig heraus. Da das Skript aufgeteilt ist – in eine lambda_function.py und ein csvtojson.sh – mussten wir sicherstellen, dass beide Teile genau wissen, welcher Input-Bucket zu welchem Output-Bucket gehört. Dieser Abgleich war nicht trivial, weil die Informationen aus einem Skript ins andere übertragen und korrekt verarbeitet werden mussten. Die Koordination der beiden Skripte hat deutlich mehr Zeit in Anspruch genommen, als ich anfangs erwartet hatte.
+Auch der Umgang mit den ARN-Rollen war eine Herausforderung, da diese bei jedem Nutzer unterschiedlich sind und entsprechend dynamisch verarbeitet werden müssen. Hier half es mir, "out-of-the-box" zu denken und ein paar unkonventionelle Lösungsansätze auszuprobieren, um schliesslich eine robuste Lösung zu finden. Insgesamt habe ich durch diese Schwierigkeiten eine Menge über die Feinheiten von AWS und die Bedeutung sauberer Schnittstellen zwischen verschiedenen Code-Bestandteilen gelernt. Rückblickend hätte ich an manchen Stellen mehr Zeit für die Planung investieren sollen, um solche Komplikationen zu reduzieren. Nichtsdestotrotz bin ich am Ende zufrieden damit, was wir erreicht haben, und weiss, dass ich diese Erfahrungen in zukünftige Projekte einbringen kann.
+
 
 
