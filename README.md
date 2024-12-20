@@ -27,7 +27,7 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
 ```
 ---
 
-#### 2. **AWS CLI installieren**
+#### 2. **AWS CLI installieren und konfigurieren **
 - **Installation auf Ubuntu/Debian:**
   ```bash
   sudo apt update
@@ -35,6 +35,36 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
   ```bash
   sudo apt install awscli -y
   ```
+  Nach dem AWS CLI installiert ist muss es noch configuriert werden.
+  Dies kann man mit folgendem Befehl machen:
+  ```
+  aws configure
+  ```
+  Als erstes wird man nach der AWS Access Key ID gefragt, dies kann man leer lassen,
+  da diese jedes mal beim Starten des Labs überschrieben wird.
+
+  Auch der AWS Secret Access Key kann leer gelassen werden, da dieser ebenfalls überschrieben wird.
+
+  Bei "Default region name" nehemen wir "us-east-1".
+
+  Bei "Default output format" nehmen wir "json"
+
+  Danach müssen wir die AWS Access Key ID und den AWS Secret Access Key in unsere Credentials einfügen.
+
+  Unsere Credentials sind für uns im AWS Lab ersichtlich.
+
+  Diese kopieren wir und raus, und bearbeiten  dann unser "credentials" File welches sich im versteckten ordner ".aws" befindet.
+
+  Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
+
+  Nun haben wir AWS CLI installiert und konfiguriert.
+
+  Zum Testen ob es funktioniert hat, können wir beisepielseweise mit
+
+  ```
+  aws s3 ls
+  ```
+  unsere Buckets aufzählen lassen, sollten wir keine haben wird einfch eine leere Ausgabe gemacht.
   
 - **Verifizierung:**  
   Mit folgendem Befehl lässt sich überprüfen, ob die Installation erfolgreich war:
