@@ -195,7 +195,7 @@ Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden 
 
 
 
-#### 5. **Reflexion**
+#### **Reflexion**
 Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
 
 ### **Reflexion Dominick**
