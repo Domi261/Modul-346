@@ -184,12 +184,12 @@ Nun könne wir noch validieren, ob das Skript wirklich alles gemacht hat:
 
 Als erstes listen wir unsere Buckets auf:
 
-![aws_credentials](get_buckets.png)
+![aws_credentials](images/get_buckets.png)
 
 Wie wir sehen wurden unsere Buckets erfolgreich hinzugefügt.
 
 Nun validieren wir noch unsere Funktion, hierbei können wir den Namen aus dem Skript entnehmen und die Region noch auf "us-east-1" eingrenzen.
 
-![aws_credentials](get_function.png)
+![aws_credentials](images/get_function.png)
 
 Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden und funktioniert so wie es sollte
