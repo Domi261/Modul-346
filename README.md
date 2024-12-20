@@ -139,13 +139,21 @@ Der Grund, warum jeder Nutzer oder jede Umgebung eine individuelle Role ARN ben�
 
 Der Role ARN kann im IAM-Dashboard eingesehen werden.
 
-Dafür geht man ins IAM-Dashboard Rein
+Dafür geht man ins IAM-Dashboard rein.
 
-Beim Reiter Zugriffsverwaltung kann man dann auf "Rollen" klicken.
+![IAM](IAM.png)
+
+Beim Reiter Zugriffsverwaltung kann man dann auf "Rollen" klicken:
+
+![Rollen](Rollen.png)
 
 Nun werden sämtliche Rollen angezeigt.
 
 Dann klickt man auf die "Lab Role"
+
+
+![Rollen](ARN_Lab_Role.png)
+
 
 Nun sieht man den ARN
 
