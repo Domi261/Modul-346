@@ -2,7 +2,7 @@
 Hier in der Projektstruktur sehen wir alle Files, welche wir für das Projekt benötigen.
 Im nächsten Schritt werden alle notwendigen Tools für die Nutzung installiert.
 ```
-Modul346-Cloudloesungen-konzipieren-und-realisieren/
+Modul-346/
 ├── images               # Dieser Ordner beinhaltet Bilder für die Dokumentation und kann ignoriert werden 
 ├── csvtojson.sh         # Skript
 ├── lambda_function.py   # Die eigentliche Lambda Funktion
