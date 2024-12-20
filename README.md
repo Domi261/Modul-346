@@ -48,6 +48,7 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
   Bei "Default region name" nehemen wir "us-east-1".
 
   Bei "Default output format" nehmen wir "json"
+  
   ![aws_konfigurieren](images/aws_configure_einrichten.png)
 
 
@@ -67,7 +68,8 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
   Nun haben wir AWS CLI installiert und konfiguriert.
 
   
-- **Verifizierung:**  
+- **Verifizierung:**
+    
   Mit folgendem Befehl lässt sich überprüfen, ob die Installation erfolgreich war:
   ```bash
   aws --version
@@ -84,6 +86,7 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
 ---
 
 #### 3. **Python 3.x und pip installieren**
+
 - **Installation auf Ubuntu/Debian:**
   ```bash
   sudo apt update
@@ -103,6 +106,7 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
 ---
 
 #### 4. **Abhängigkeiten aus `requirements.txt` installieren**
+
 - **Installiere die Abhängigkeiten:**  
   Nutze pip, um die Pakete aus der `requirements.txt` zu installieren:
   ```bash
@@ -124,38 +128,39 @@ Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 2 kleine
 
 ### Schritte zur Ausführung des Skripts
 
-Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden:
+  Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden:
 
-![aws_credentials](images/all_in_dir.png)
+  ![aws_credentials](images/all_in_dir.png)
 
-Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
+  Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
 
-Dies machen wir mit folgendem Befehl:
+  Dies machen wir mit folgendem Befehl:
 
-```
-zip lambda_function.zip lambda_function.py
+  ```
+  zip lambda_function.zip lambda_function.py
 
-```
-![aws_credentials](images/lambda_zippen.png)
+  ```
+  ![aws_credentials](images/lambda_zippen.png)
 
-Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen
+  Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen
 
 1. **Ausführungsrechte setzen (falls noch nicht geschehen)**:
    ```bash
    chmod +x csvtojson.sh
 
-------------------------------------------------------------
-### Testing
+  ------------------------------------------------------------
+  ### Testing
 
-1. Wir führen nun unser Skript mit:
+  1. Wir führen nun unser Skript mit:
   ```
-/. csvtojson.sh
+  /. csvtojson.sh
   ```
-aus.
+  aus.
   
 1. **test.csv-Datei vorbereiten**
 
-Die Datei `test.csv` muss sich im gleichen Verzeichnis wie das Bash-Skript, welches die Infrastruktur aufbaut, befinden. Dadurch wird beim Ausführen des Skripts die `test.csv`-Datei automatisch in den neu erstellten Input-Bucket hochgeladen. Anschliessend wird durch den S3-Trigger die Lambda-Funktion ausgeführt, die die CSV-Datei ins JSON-Format konvertiert und im Output-Bucket ablegt.
+
+  Die Datei `test.csv` muss sich im gleichen Verzeichnis wie das Bash-Skript, welches die Infrastruktur aufbaut, befinden. Dadurch wird beim Ausführen des Skripts die `test.csv`-Datei automatisch in den neu erstellten Input-Bucket hochgeladen. Anschliessend wird durch    den S3-Trigger die Lambda-Funktion ausgeführt, die die CSV-Datei ins JSON-Format konvertiert und im Output-Bucket ablegt.
 
    **Beispiel für den Inhalt von `test.csv`:**
    ```csv
