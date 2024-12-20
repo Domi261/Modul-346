@@ -9,7 +9,7 @@ if ! command -v aws &> /dev/null; then
 fi
 
 # IAM-Rollen-ARN aus IAM-Konsole
-ROLE_ARN="" <---- ARN muss abgeändert werden!
+ROLE_ARN="" # <---- ARN muss abgeändert werden!
 
 # Überprüfen, ob die Variable für die IAM-Rolle gesetzt wurde
 if [ "$ROLE_ARN" = "<EXISTING_ROLE_ARN>" ]; then
@@ -22,7 +22,7 @@ TIMESTAMP=$(date +%s)
 REGION="us-east-1"
 INPUT_BUCKET="inputbucketcsvtojson-${TIMESTAMP}"
 OUTPUT_BUCKET="outbucketcsvtojson-${TIMESTAMP}"
-LAMBDA_FUNCTION_NAME="CsvToJsonConverter40"
+LAMBDA_FUNCTION_NAME="CsvToJsonConverter-${TIMESTAMP}"
 ZIP_FILE="lambda_function.zip"
 
 echo "Starte die Einrichtung der AWS-Infrastruktur..."
