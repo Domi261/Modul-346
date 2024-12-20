@@ -247,6 +247,13 @@ Insgesamt sind wir mit den Testergebnissen sehr zufrieden. Die Tests haben uns b
 
 ![CSV_to_JSON_Process_Professional_Diagram](https://github.com/user-attachments/assets/ff5e01e7-58b1-437b-b0c9-b9e81509b588)
 
+Start: Klonen des Repositories, um Zugriff auf die Projektdateien zu erhalten.
+Installation: Einrichtung von AWS CLI, Python und benötigten Bibliotheken.
+Konfiguration: Hinzufügen der Role ARN und Vorbereitung der Lambda-Funktion (ZIP und Berechtigungen).
+Ausführung: Skript startet, erstellt die Infrastruktur (Buckets, Lambda) und lädt die CSV-Datei hoch.
+Verarbeitung: CSV löst die Lambda-Funktion aus, die die Datei in JSON konvertiert und speichert.
+Validierung: Überprüfung, ob alle Schritte erfolgreich durchgeführt wurden.
+Ende: JSON-Datei ist bereit zur Weiterverarbeitung.
 
 #### **Reflexion**
 Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
