@@ -151,132 +151,30 @@ chmod +x csvtojson.sh
 ------------------------------------------------------------
 ### Ausführen des Skripts
 
-Wir führen nun unser Skript mit:
-```
-/. csvtojson.sh
-```
-aus.
-  
-1. **test.csv-Datei vorbereiten**
+Wir führen unser Skript nun mit:
 
-Die Datei `test.csv` muss sich im gleichen Verzeichnis wie das Bash-Skript, welches die Infrastruktur aufbaut, befinden. Dadurch wird beim Ausführen des Skripts die `test.csv`-Datei automatisch in den neu erstellten Input-Bucket hochgeladen. Anschliessend wird durch    den S3-Trigger die Lambda-Funktion ausgeführt, die die CSV-Datei ins JSON-Format konvertiert und im Output-Bucket ablegt.
-
-**Inhatl der CSV Datei `test.csv`:**
-   ```csv
-   id,name,age,city,country,profession,email,salary
-   1,John Doe,29,Zurich,Switzerland,Engineer,john.doe@example.com,75000
-   2,Jane Smith,34,Bern,Switzerland,Doctor,jane.smith@example.com,90000
-   3,Bob Brown,23,Geneva,Switzerland,Teacher,bob.brown@example.com,50000
-   4,Alice White,28,Basel,Switzerland,Designer,alice.white@example.com,62000
-   5,Chris Green,41,Luzern,Switzerland,Manager,chris.green@example.com,110000
-   6,Mary Black,30,Zug,Switzerland,Journalist,mary.black@example.com,65000
-   7,Peter Gray,27,Lausanne,Switzerland,Data Analyst,peter.gray@example.com,80000
-   8,Susan Blue,32,Fribourg,Switzerland,Architect,susan.blue@example.com,95000
-   9,David Gold,36,Winterthur,Switzerland,Librarian,david.gold@example.com,47000
-   10,Laura Silver,29,St. Gallen,Switzerland,Marketing Specialist,laura.silver@example.com,71000
-   ```
-Die test.csv-Datei schaut nach der Konvertierung ins JSON-Format wie folgt aus:
-```json
-  [
-  {
-    "id": "1",
-    "name": "John Doe",
-    "age": "29",
-    "city": "Zurich",
-    "country": "Switzerland",
-    "profession": "Engineer",
-    "email": "john.doe@example.com",
-    "salary": "75000"
-  },
-  {
-    "id": "2",
-    "name": "Jane Smith",
-    "age": "34",
-    "city": "Bern",
-    "country": "Switzerland",
-    "profession": "Doctor",
-    "email": "jane.smith@example.com",
-    "salary": "90000"
-  },
-  {
-    "id": "3",
-    "name": "Bob Brown",
-    "age": "23",
-    "city": "Geneva",
-    "country": "Switzerland",
-    "profession": "Teacher",
-    "email": "bob.brown@example.com",
-    "salary": "50000"
-  },
-  {
-    "id": "4",
-    "name": "Alice White",
-    "age": "28",
-    "city": "Basel",
-    "country": "Switzerland",
-    "profession": "Designer",
-    "email": "alice.white@example.com",
-    "salary": "62000"
-  },
-  {
-    "id": "5",
-    "name": "Chris Green",
-    "age": "41",
-    "city": "Luzern",
-    "country": "Switzerland",
-    "profession": "Manager",
-    "email": "chris.green@example.com",
-    "salary": "110000"
-  },
-  {
-    "id": "6",
-    "name": "Mary Black",
-    "age": "30",
-    "city": "Zug",
-    "country": "Switzerland",
-    "profession": "Journalist",
-    "email": "mary.black@example.com",
-    "salary": "65000"
-  },
-  {
-    "id": "7",
-    "name": "Peter Gray",
-    "age": "27",
-    "city": "Lausanne",
-    "country": "Switzerland",
-    "profession": "Data Analyst",
-    "email": "peter.gray@example.com",
-    "salary": "80000"
-  },
-  {
-    "id": "8",
-    "name": "Susan Blue",
-    "age": "32",
-    "city": "Fribourg",
-    "country": "Switzerland",
-    "profession": "Architect",
-    "email": "susan.blue@example.com",
-    "salary": "95000"
-  },
-  {
-    "id": "9",
-    "name": "David Gold",
-    "age": "36",
-    "city": "Winterthur",
-    "country": "Switzerland",
-    "profession": "Librarian",
-    "email": "david.gold@example.com",
-    "salary": "47000"
-  },
-  {
-    "id": "10",
-    "name": "Laura Silver",
-    "age": "29",
-    "city": "St. Gallen",
-    "country": "Switzerland",
-    "profession": "Marketing Specialist",
-    "email": "laura.silver@example.com",
-    "salary": "71000"
-  }
-]
+```bash
+./csvtojson.sh
 ```
+aus. 
+
+Wie wir sehen, wird am Anfang unsere ganze Infrastruktur eingerichtet.
+
+Als erstes werden die 2 Buckets erstellt, wichtig zu beachten war hierbei, dass die Buckets immer einen **universell
+
+einmaligen** Namen bekommen, dies konnten wir mit der "TIMESTAMP=$" Variable bewerkstelligen.
+
+Im nächsten Schritt wird die Lambda Funktion in AWS erstellt und es werden die Lambda-Berechtigungen für den S3-Trigger hinzugefügt hinzugefügt.
+
+Danach wir der S3-Trigger konfiguriert.
+
+Das Skript nimmt dann unser "test1.csv" und lädt es in den Input-Bucket hoch.
+
+Im nächsten Schritt wird das CSV-File zu einem JSON-File konvertiert und in den Output-Bucket hochgeladen.
+
+Danach downloadet es für uns die fertige JSON-Datei namens "test1.json" und das Skript zeigt und schon die Datei mir korrekter Syntax an.
+
+![aws_credentials](images/script_explained.png)
+
+
+
