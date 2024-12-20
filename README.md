@@ -123,7 +123,7 @@ pip3 show boto3
 
 **Alles bereit!**
 
-Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 2 kleine Schritte machen, bevor wir das Skript ausführen können.
+Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 3 kleine Schritte machen, bevor wir das Skript ausführen können.
 
 ------------------------------------------------------------
 
@@ -157,8 +157,10 @@ Dann klickt man auf die "Lab Role"
 
 Nun sieht man den ARN
 
-Diesen muss man rauskopieren und dann mit einem Texteditor wie Nano in das File csvtojson.sh einfügen.
+Diesen muss man rauskopieren und dann mit einem Texteditor wie Nano in das File csvtojson.sh einfügen:
 
+
+![Rollen](images/einfügen.png)
 
 
 **Im zweiten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.**
