@@ -223,6 +223,21 @@ Nun validieren wir noch unsere Funktion, hierbei können wir den Namen aus dem S
 
 Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden und funktioniert so wie es sollte.
 
+#### **Testing**
+
+| **Testnummer** | **Testbeschreibung**                       | **Erwartetes Ergebnis**                         | **Tatsächliches Ergebnis**                      | **Status**  | **Bemerkungen**                   |
+|----------------|-------------------------------------------|------------------------------------------------|------------------------------------------------|------------|------------------------------------|
+| 1              | Skript ausführen ohne konfigurierte ARN   | Skript wird nicht ausgeführt, Fehlerausgabe    | Fehlerausgabe: "ARN fehlt"                     | ✅ Bestanden | Fehler korrekt abgefangen         |
+| 2              | CSV-Datei hochladen in den Input-Bucket   | Datei wird erfolgreich hochgeladen             | Datei im Bucket sichtbar                       | ✅ Bestanden | Keine                             |
+| 3              | Lambda-Funktion triggert beim Upload      | Funktion wird ausgeführt, JSON wird erstellt   | JSON-Datei im Output-Bucket sichtbar          | ✅ Bestanden | Keine                             |
+| 4              | Upload einer fehlerhaften CSV-Datei       | Skript bricht ab, Fehlerausgabe                | Fehlerausgabe: "Ungültige CSV"                 | ✅ Bestanden | Keine                             |
+| 5              | Ausführen ohne Berechtigungen            | Skript meldet fehlende Berechtigungen          | Fehlerausgabe: "Zugriff verweigert"            | ✅ Bestanden | Zugriffsprüfung funktioniert      |
+| 6              | Mehrere Dateien gleichzeitig hochladen    | Alle Dateien werden verarbeitet                | Alle JSON-Dateien im Output-Bucket sichtbar    | ✅ Bestanden | Keine                             |
+| 7              | Überprüfung der JSON-Struktur             | Struktur entspricht der Vorgabe                | Alle JSON-Felder korrekt erstellt              | ✅ Bestanden | Keine                             |
+| 8              | Test mit leerer CSV-Datei                 | Keine Verarbeitung, Fehlerausgabe              | Fehlerausgabe: "Leere Datei"                   | ✅ Bestanden | Keine                             |
+| 9              | Test mit großer CSV-Datei (>10 MB)        | Verarbeitung dauert länger, bleibt stabil      | JSON korrekt erstellt                          | ✅ Bestanden | Keine                             |
+| 10             | End-to-End-Test                          | CSV wird zu JSON, ohne Fehler                  | Alle Schritte erfolgreich durchlaufen          | ✅ Bestanden | Keine                             |
+
 
 #### **Ablaufprozess**
 
@@ -232,7 +247,7 @@ Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden 
 #### **Reflexion**
 Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
 
-### **Reflexion Dominick**
+## **Reflexion Dominick**
 
 Als wir das Projekt durchführten, stießen wir auf einige Schwierigkeiten. So war es beispielsweise unklar, ob das Skript ohne manuelles Konfigurieren der ARN lauffähig ist, da diese je nach Nutzer unterschiedlich ist. Außerdem haben wir zunächst alle Änderungen in ein Test-Repository gepusht und erst am Ende in das finale Abgabe-Repository übertragen. Dieser zusätzliche Schritt hat unnötig Zeit gekostet, die wir uns durch eine bessere Planung im Vorfeld hätten sparen können. Bei einem logischen Problem im Ablauf des Skripts konnte uns Herr Dall Acqua unterstützen, sodass wir den Fehler letztendlich beheben konnten.
 
