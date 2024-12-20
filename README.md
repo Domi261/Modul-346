@@ -162,9 +162,9 @@ aus.
 
 Wie wir sehen, wird am Anfang unsere ganze Infrastruktur eingerichtet.
 
-Als erstes werden die 2 Buckets erstellt, wichtig zu beachten war hierbei, dass die Buckets immer einen **universell
+Als erstes werden die 2 Buckets erstellt, wichtig zu beachten war hierbei, dass die Buckets immer einen **universell**
 
-einmaligen** Namen bekommen, dies konnten wir mit der "TIMESTAMP=$" Variable bewerkstelligen.
+**einmaligen** Namen bekommen, dies konnten wir mit der "TIMESTAMP=$" Variable bewerkstelligen.
 
 Im nächsten Schritt wird die Lambda Funktion in AWS erstellt und es werden die Lambda-Berechtigungen für den S3-Trigger hinzugefügt hinzugefügt.
 
