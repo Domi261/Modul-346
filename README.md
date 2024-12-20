@@ -48,14 +48,21 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
   Bei "Default region name" nehemen wir "us-east-1".
 
   Bei "Default output format" nehmen wir "json"
+  ![aws_konfigurieren](image/aws_konfigurieren.png)
+
 
   Danach müssen wir die AWS Access Key ID und den AWS Secret Access Key in unsere Credentials einfügen.
 
-  Unsere Credentials sind für uns im AWS Lab ersichtlich.
+  Unsere Credentials sind für uns im AWS Lab ersichtlich:
+
+  ![aws_credentials](image/aws_credentials.png)  
 
   Diese kopieren wir und raus, und bearbeiten  dann unser "credentials" File welches sich im versteckten ordner ".aws" befindet.
 
   Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
+
+  ![aws_credentials](image/aws_config.png)
+
 
   Nun haben wir AWS CLI installiert und konfiguriert.
 
@@ -116,6 +123,9 @@ Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 2 kleine
 ### Schritte zur Ausführung des Skripts
 
 Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden!
+
+
+
 
 Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
 
