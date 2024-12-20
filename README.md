@@ -29,94 +29,93 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
 
 #### 2. **AWS CLI installieren und konfigurieren**
 - **Installation auf Ubuntu/Debian:**
-  ```bash
-  sudo apt update
-  ```
-  ```bash
-  sudo apt install awscli -y
-  ```
-  Nach dem AWS CLI installiert ist muss es noch configuriert werden.
-  Dies kann man mit folgendem Befehl machen:
-  ```
-  aws configure
-  ```
-  Als erstes wird man nach der AWS Access Key ID gefragt, dies kann man leer lassen,
-  da diese jedes mal beim Starten des Labs überschrieben wird.
+```bash
+sudo apt update
+```
+```bash
+sudo apt install awscli -y
+```
+Nach dem AWS CLI installiert ist muss es noch configuriert werden.
+Dies kann man mit folgendem Befehl machen:
+```
+aws configure
+```
+Als erstes wird man nach der AWS Access Key ID gefragt, dies kann man leer lassen,
+da diese jedes mal beim Starten des Labs überschrieben wird.
 
-  Auch der AWS Secret Access Key kann leer gelassen werden, da dieser ebenfalls überschrieben wird.
+Auch der AWS Secret Access Key kann leer gelassen werden, da dieser ebenfalls überschrieben wird.
 
-  Bei "Default region name" nehemen wir "us-east-1".
+Bei "Default region name" nehemen wir "us-east-1".
 
-  Bei "Default output format" nehmen wir "json"
+Bei "Default output format" nehmen wir "json"
   
-  ![aws_konfigurieren](images/aws_configure_einrichten.png)
+![aws_konfigurieren](images/aws_configure_einrichten.png)
 
 
-  Danach müssen wir die AWS Access Key ID und den AWS Secret Access Key in unsere Credentials einfügen.
+Danach müssen wir die AWS Access Key ID und den AWS Secret Access Key in unsere Credentials einfügen.
 
-  Unsere Credentials sind für uns im AWS Lab ersichtlich:
+Unsere Credentials sind für uns im AWS Lab ersichtlich:
 
-  ![aws_credentials](images/aws_lab_credentials.png)  
+![aws_credentials](images/aws_lab_credentials.png)  
 
-  Diese kopieren wir und raus, und bearbeiten  dann unser "credentials" File welches sich im versteckten ordner ".aws" befindet.
+Diese kopieren wir und raus, und bearbeiten  dann unser "credentials" File welches sich im versteckten ordner ".aws" befindet.
 
-  Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
+Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
 
-  ![aws_credentials](images/nano_credentials.png)
+![aws_credentials](images/nano_credentials.png)
 
 
-  Nun haben wir AWS CLI installiert und konfiguriert.
+Nun haben wir AWS CLI installiert und konfiguriert.
 
   
 - **Verifizierung:**
     
-  Mit folgendem Befehl lässt sich überprüfen, ob die Installation erfolgreich war:
-  ```bash
-  aws --version
-  ```
-  Zum Testen ob es wir es richtig konfiguriert haben, können wir mit:
+Mit folgendem Befehl lässt sich überprüfen, ob die Installation erfolgreich war:
+```bash
+aws --version
+```
+Zum Testen ob es wir es richtig konfiguriert haben, können wir mit:
 
-  ```
-  aws s3 ls
-  ```
-  unsere Buckets aufzählen lassen, sollten wir keine haben, wird einfch eine leere Ausgabe gemacht.
+```
+aws s3 ls
+```
+unsere Buckets aufzählen lassen, sollten wir keine haben, wird einfch eine leere Ausgabe gemacht.
 
-  ![aws_credentials](images/buckets_sind_da.png)
-
+![aws_credentials](images/buckets_sind_da.png)
 ---
 
 #### 3. **Python 3.x und pip installieren**
 
 - **Installation auf Ubuntu/Debian:**
-  ```bash
-  sudo apt update
-  ```
-  ```bash
-  sudo apt install python3 python3-pip -y
-  ```
+```bash
+sudo apt update
+```
+```bash
+sudo apt install python3 python3-pip -y
+```
 - **Verifizierung:**  
-  Überprüfe die installierte Version von Python und pip:
-  ```bash
-  python3 --version
-  ```
-  ```bash
-  pip3 --version
-  ```
+Überprüfe die installierte Version von Python und pip:
+```bash
+python3 --version
+```
+```bash
+pip3 --version
+```
 
 ---
 
 #### 4. **Abhängigkeiten aus `requirements.txt` installieren**
 
 - **Installiere die Abhängigkeiten:**  
-  Nutze pip, um die Pakete aus der `requirements.txt` zu installieren:
-  ```bash
-  pip3 install -r requirements.txt
-  ```
+Nutze pip, um die Pakete aus der `requirements.txt` zu installieren:
+```bash
+pip3 install -r requirements.txt
+```
 - **Verifizierung der boto3-Installation:**  
-  Überprüfe, ob `boto3` korrekt installiert wurde:
-  ```bash
-  pip3 show boto3
-  ```
+Überprüfe, ob `boto3` korrekt installiert wurde:
+```bash
+pip3 show boto3
+```
 
 ------------------------------------------------------------
 
@@ -128,41 +127,40 @@ Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 2 kleine
 
 ### Schritte zur Ausführung des Skripts
 
-  Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden:
+Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden:
 
-  ![aws_credentials](images/all_in_dir.png)
+![aws_credentials](images/all_in_dir.png)
 
-  Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
+Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
 
-  Dies machen wir mit folgendem Befehl:
+Dies machen wir mit folgendem Befehl:
 
-  ```
-  zip lambda_function.zip lambda_function.py
+```
+zip lambda_function.zip lambda_function.py
 
-  ```
-  ![aws_credentials](images/lambda_zippen.png)
+```
+![aws_credentials](images/lambda_zippen.png)
 
-  Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen
+Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen
 
 1. **Ausführungsrechte setzen (falls noch nicht geschehen)**:
-   ```bash
-   chmod +x csvtojson.sh
+```bash
+chmod +x csvtojson.sh
+```
+------------------------------------------------------------
+ ### Testing
 
-  ------------------------------------------------------------
-  ### Testing
-
-  1. Wir führen nun unser Skript mit:
-  ```
-  /. csvtojson.sh
-  ```
-  aus.
+1. Wir führen nun unser Skript mit:
+```
+/. csvtojson.sh
+```
+aus.
   
 1. **test.csv-Datei vorbereiten**
 
+Die Datei `test.csv` muss sich im gleichen Verzeichnis wie das Bash-Skript, welches die Infrastruktur aufbaut, befinden. Dadurch wird beim Ausführen des Skripts die `test.csv`-Datei automatisch in den neu erstellten Input-Bucket hochgeladen. Anschliessend wird durch    den S3-Trigger die Lambda-Funktion ausgeführt, die die CSV-Datei ins JSON-Format konvertiert und im Output-Bucket ablegt.
 
-  Die Datei `test.csv` muss sich im gleichen Verzeichnis wie das Bash-Skript, welches die Infrastruktur aufbaut, befinden. Dadurch wird beim Ausführen des Skripts die `test.csv`-Datei automatisch in den neu erstellten Input-Bucket hochgeladen. Anschliessend wird durch    den S3-Trigger die Lambda-Funktion ausgeführt, die die CSV-Datei ins JSON-Format konvertiert und im Output-Bucket ablegt.
-
-   **Beispiel für den Inhalt von `test.csv`:**
+**Inhatl der CSV Datei `test.csv`:**
    ```csv
    id,name,age,city,country,profession,email,salary
    1,John Doe,29,Zurich,Switzerland,Engineer,john.doe@example.com,75000
@@ -176,8 +174,8 @@ Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 2 kleine
    9,David Gold,36,Winterthur,Switzerland,Librarian,david.gold@example.com,47000
    10,Laura Silver,29,St. Gallen,Switzerland,Marketing Specialist,laura.silver@example.com,71000
    ```
-  Die test.csv-Datei schaut nach der Konvertierung ins JSON-Format wie folgt aus:
-  ```json
+Die test.csv-Datei schaut nach der Konvertierung ins JSON-Format wie folgt aus:
+```json
   [
   {
     "id": "1",
