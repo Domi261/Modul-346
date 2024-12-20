@@ -214,5 +214,15 @@ Rückblickend haben wir viel dazugelernt, insbesondere im Umgang mit AWS, Linux 
 Als ich den Code geschrieben habe, stellte sich vor allem die Handhabung der dynamischen Output-Bucket-Namen als äusserst knifflig heraus. Da das Skript aufgeteilt ist – in eine lambda_function.py und ein csvtojson.sh – mussten wir sicherstellen, dass beide Teile genau wissen, welcher Input-Bucket zu welchem Output-Bucket gehört. Dieser Abgleich war nicht trivial, weil die Informationen aus einem Skript ins andere übertragen und korrekt verarbeitet werden mussten. Die Koordination der beiden Skripte hat deutlich mehr Zeit in Anspruch genommen, als ich anfangs erwartet hatte.
 Auch der Umgang mit den ARN-Rollen war eine Herausforderung, da diese bei jedem Nutzer unterschiedlich sind und entsprechend dynamisch verarbeitet werden müssen. Hier half es mir, "out-of-the-box" zu denken und ein paar unkonventionelle Lösungsansätze auszuprobieren, um schliesslich eine robuste Lösung zu finden. Insgesamt habe ich durch diese Schwierigkeiten eine Menge über die Feinheiten von AWS und die Bedeutung sauberer Schnittstellen zwischen verschiedenen Code-Bestandteilen gelernt. Rückblickend hätte ich an manchen Stellen mehr Zeit für die Planung investieren sollen, um solche Komplikationen zu reduzieren. Nichtsdestotrotz bin ich am Ende zufrieden damit, was wir erreicht haben, und weiss, dass ich diese Erfahrungen in zukünftige Projekte einbringen kann.
 
+## **Reflexion Louis**
+
+Im Laufe des Projekts sind uns einige Herausforderungen begegnet, die wertvolle Erkenntnisse gebracht haben. Der Einsatz mehrerer Repositories führte dazu, dass anfängliche Änderungen verloren gingen, was uns gezeigt hat, wie wichtig ein klar definierter Workflow ist. Eine bessere Abstimmung hätte hier Zeit gespart und die Zusammenarbeit vereinfacht.
+Trotz einiger Hindernisse konnten wir viel lernen, vor allem im Bereich Automatisierung und Infrastruktur. Besonders die Arbeit mit AWS und das Erstellen von Skripten haben uns dabei geholfen, unsere Fähigkeiten zu erweitern.
+Für zukünftige Projekte nehmen wir uns vor, unsere Planung zu optimieren und klarere Prozesse zu definieren. Insgesamt sind wir zufrieden mit dem Ergebnis und freuen uns über die Erfahrungen, die wir während der Umsetzung gesammelt haben.
+
+
+
+
+
 
 
