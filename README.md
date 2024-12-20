@@ -141,18 +141,18 @@ Der Role ARN kann im IAM-Dashboard eingesehen werden.
 
 Dafür geht man ins IAM-Dashboard rein.
 
-![IAM](IAM.png)
+![IAM](images/IAM.png)
 
 Beim Reiter Zugriffsverwaltung kann man dann auf "Rollen" klicken:
 
-![Rollen](Rollen.png)
+![Rollen](images/Rollen.png)
 
 Nun werden sämtliche Rollen angezeigt.
 
 Dann klickt man auf die "Lab Role"
 
 
-![Rollen](ARN_Lab_Role.png)
+![Rollen](images/ARN_Lab_Role.png)
 
 
 Nun sieht man den ARN
