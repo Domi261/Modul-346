@@ -134,6 +134,7 @@ Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis 
 ![aws_credentials](images/all_in_dir.png)
 
 **Im ersten Schritt muss der Role ARN (Amazon Resource Name) geändert werden.**
+
 Der Grund, warum jeder Nutzer oder jede Umgebung eine individuelle Role ARN benötigt, liegt darin, dass Rollen an bestimmte AWS-Konten, Berechtigungen und Sicherheitsrichtlinien gebunden sind.
 
 Der Role ARN kann im IAM-Dashboard eingesehen werden.
