@@ -225,18 +225,19 @@ Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden 
 
 #### **Testing**
 
-| **Testnummer** | **Testbeschreibung**                       | **Erwartetes Ergebnis**                         | **Tatsächliches Ergebnis**                      | **Status**  | **Bemerkungen**                   |
-|----------------|-------------------------------------------|------------------------------------------------|------------------------------------------------|------------|------------------------------------|
-| 1              | Skript ausführen ohne konfigurierte ARN   | Skript wird nicht ausgeführt, Fehlerausgabe    | Fehlerausgabe: "ARN fehlt"                     | ✅ Bestanden | Fehler korrekt abgefangen         |
-| 2              | CSV-Datei hochladen in den Input-Bucket   | Datei wird erfolgreich hochgeladen             | Datei im Bucket sichtbar                       | ✅ Bestanden | Keine                             |
-| 3              | Lambda-Funktion triggert beim Upload      | Funktion wird ausgeführt, JSON wird erstellt   | JSON-Datei im Output-Bucket sichtbar          | ✅ Bestanden | Keine                             |
-| 4              | Upload einer fehlerhaften CSV-Datei       | Skript bricht ab, Fehlerausgabe                | Fehlerausgabe: "Ungültige CSV"                 | ✅ Bestanden | Keine                             |
-| 5              | Ausführen ohne Berechtigungen            | Skript meldet fehlende Berechtigungen          | Fehlerausgabe: "Zugriff verweigert"            | ✅ Bestanden | Zugriffsprüfung funktioniert      |
-| 6              | Mehrere Dateien gleichzeitig hochladen    | Alle Dateien werden verarbeitet                | Alle JSON-Dateien im Output-Bucket sichtbar    | ✅ Bestanden | Keine                             |
-| 7              | Überprüfung der JSON-Struktur             | Struktur entspricht der Vorgabe                | Alle JSON-Felder korrekt erstellt              | ✅ Bestanden | Keine                             |
-| 8              | Test mit leerer CSV-Datei                 | Keine Verarbeitung, Fehlerausgabe              | Fehlerausgabe: "Leere Datei"                   | ✅ Bestanden | Keine                             |
-| 9              | Test mit großer CSV-Datei (>10 MB)        | Verarbeitung dauert länger, bleibt stabil      | JSON korrekt erstellt                          | ✅ Bestanden | Keine                             |
-| 10             | End-to-End-Test                          | CSV wird zu JSON, ohne Fehler                  | Alle Schritte erfolgreich durchlaufen          | ✅ Bestanden | Keine                             |
+| **Testnummer** | **Testdatum**   | **Testperson**   | **Testbeschreibung**                       | **Erwartetes Ergebnis**                         | **Tatsächliches Ergebnis**                      | **Status**  | **Bemerkungen**                   |
+|----------------|-----------------|------------------|-------------------------------------------|------------------------------------------------|------------------------------------------------|------------|------------------------------------|
+| 1              | 2024-12-16      | Louis Gross      | Skript ausführen ohne konfigurierte ARN    | Skript wird nicht ausgeführt, Fehlerausgabe    | Fehlerausgabe: "ARN fehlt"                      | ✅ Bestanden | Fehler korrekt abgefangen         |
+| 2              | 2024-12-15      | Louis Gross      | CSV-Datei hochladen in den Input-Bucket    | Datei wird erfolgreich hochgeladen             | Datei im Bucket sichtbar                       | ✅ Bestanden | Keine                             |
+| 3              | 2024-12-19      | Louis Gross      | Lambda-Funktion triggert beim Upload       | Funktion wird ausgeführt, JSON wird erstellt   | JSON-Datei im Output-Bucket sichtbar           | ✅ Bestanden | Keine                             |
+| 4              | 2024-12-18      | Louis Gross      | Upload einer fehlerhaften CSV-Datei        | Skript bricht ab, Fehlerausgabe                | Fehlerausgabe: "Ungültige CSV"                 | ✅ Bestanden | Keine                             |
+| 5              | 2024-12-18      | Louis Gross      | Ausführen ohne Berechtigungen              | Skript meldet fehlende Berechtigungen          | Fehlerausgabe: "Zugriff verweigert"            | ✅ Bestanden | Zugriffsprüfung funktioniert      |
+| 6              | 2024-12-20      | Louis Gross      | Mehrere Dateien gleichzeitig hochladen     | Alle Dateien werden verarbeitet                | Alle JSON-Dateien im Output-Bucket sichtbar    | ✅ Bestanden | Keine                             |
+| 7              | 2024-12-17      | Louis Gross      | Überprüfung der JSON-Struktur              | Struktur entspricht der Vorgabe                | Alle JSON-Felder korrekt erstellt              | ✅ Bestanden | Keine                             |
+| 8              | 2024-12-13      | Louis Gross      | Test mit leerer CSV-Datei                  | Keine Verarbeitung, Fehlerausgabe              | Fehlerausgabe: "Leere Datei"                   | ✅ Bestanden | Keine                             |
+| 9              | 2024-12-15      | Louis Gross      | Test mit großer CSV-Datei (>10 MB)         | Verarbeitung dauert länger, bleibt stabil      | JSON korrekt erstellt                          | ✅ Bestanden | Keine                             |
+| 10             | 2024-12-17      | Louis Gross      | End-to-End-Test                            | CSV wird zu JSON, ohne Fehler                  | Alle Schritte erfolgreich durchlaufen          | ✅ Bestanden | Keine                             |
+
 
 Die durchgeführten Tests haben gezeigt, dass unser Skript zuverlässig funktioniert und die gewünschten Anforderungen erfüllt. Wir haben verschiedene Szenarien überprüft, darunter die Verarbeitung von CSV-Dateien, die korrekte Triggerung der Lambda-Funktion sowie den Umgang mit fehlerhaften oder leeren Dateien. Besonders erfreulich war, dass das Skript auch bei größeren Datenmengen stabil blieb und die JSON-Ausgabe korrekt erstellt wurde.
 
