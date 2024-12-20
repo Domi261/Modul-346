@@ -48,20 +48,20 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
   Bei "Default region name" nehemen wir "us-east-1".
 
   Bei "Default output format" nehmen wir "json"
-  ![aws_konfigurieren](images/aws_konfigurieren.png)
+  ![aws_konfigurieren](images/aws_configure_einrichten.png)
 
 
   Danach müssen wir die AWS Access Key ID und den AWS Secret Access Key in unsere Credentials einfügen.
 
   Unsere Credentials sind für uns im AWS Lab ersichtlich:
 
-  ![aws_credentials](images/aws_credentials.png)  
+  ![aws_credentials](images/aws_lab_credentials.png)  
 
   Diese kopieren wir und raus, und bearbeiten  dann unser "credentials" File welches sich im versteckten ordner ".aws" befindet.
 
   Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
 
-  ![aws_credentials](images/aws_config.png)
+  ![aws_credentials](images/nano_credentials.png)
 
 
   Nun haben wir AWS CLI installiert und konfiguriert.
@@ -72,12 +72,14 @@ cd Modul346-Cloudloesungen-konzipieren-und-realisieren
   ```bash
   aws --version
   ```
-  Zum Testen ob es wir es richtig konfiguriert haben, können wir mit
+  Zum Testen ob es wir es richtig konfiguriert haben, können wir mit:
 
   ```
   aws s3 ls
   ```
   unsere Buckets aufzählen lassen, sollten wir keine haben, wird einfch eine leere Ausgabe gemacht.
+
+  ![aws_credentials](images/buckets_sind_da.png)
 
 ---
 
@@ -122,10 +124,9 @@ Die notwendigen Tools und Pakete sind installiert. Nun müssen wir noch 2 kleine
 
 ### Schritte zur Ausführung des Skripts
 
-Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden!
+Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis befinden:
 
-
-
+![aws_credentials](images/all_in_dir.png)
 
 Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.
 
@@ -133,7 +134,10 @@ Dies machen wir mit folgendem Befehl:
 
 ```
 zip lambda_function.zip lambda_function.py
+
 ```
+![aws_credentials](images/lambda_zippen.png)
+
 Wenn wir dies gemacht haben, müssen wir das File noch ausführbar machen
 
 1. **Ausführungsrechte setzen (falls noch nicht geschehen)**:
