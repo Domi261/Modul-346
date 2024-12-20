@@ -3,9 +3,11 @@ Hier in der Projektstruktur sehen wir alle Files, welche wir für das Projekt be
 Im nächsten Schritt werden alle notwendigen Tools für die Nutzung installiert.
 ```
 Modul346-Cloudloesungen-konzipieren-und-realisieren/
+├── images               # Dieser Ordner beinhaltet Bilder für die Dokumentation und kann ignoriert werden 
 ├── csvtojson.sh         # Skript
+├── lambda_function.py   # Die eigentliche Lambda Funktion
 ├── requirements.txt     # Python-Abhängigkeiten
-├── test.csv             # Beispiel-CSV-Datei
+├── test1.csv            # CSV-Datei, welche konvertiert wird
 └── README.md            # Dokumentation
 ```
 
@@ -13,12 +15,12 @@ Modul346-Cloudloesungen-konzipieren-und-realisieren/
 
 ### Schritte zur Installation der benötigten Tools (Linux)
 
-Es ist notwendig in den folgenden Schritten die Commands in der Konsole auszuführen.
+Es ist notwendig die folgenden Commands in der Konsole auszuführen.
 
 ---
 
 #### 1. **Repository klonen**
-Der erste Schritt besteht darin das Repository zu klonen.
+Der erste Schritt besteht darin, das Repository zu klonen.
 ```bash
 git clone https://github.com/Logoko709/Modul346-Cloudloesungen-konzipieren-und-realisieren.git
 ```
@@ -35,7 +37,7 @@ sudo apt update
 ```bash
 sudo apt install awscli -y
 ```
-Nach dem AWS CLI installiert ist muss es noch configuriert werden.
+Nach dem AWS CLI installiert ist muss es noch konfiguriert werden.
 Dies kann man mit folgendem Befehl machen:
 ```
 aws configure
@@ -47,7 +49,7 @@ Auch der AWS Secret Access Key kann leer gelassen werden, da dieser ebenfalls ü
 
 Bei "Default region name" nehemen wir "us-east-1".
 
-Bei "Default output format" nehmen wir "json"
+Bei "Default output format" nehmen wir "json".
   
 ![aws_konfigurieren](images/aws_configure_einrichten.png)
 
@@ -58,7 +60,7 @@ Unsere Credentials sind für uns im AWS Lab ersichtlich:
 
 ![aws_credentials](images/aws_lab_credentials.png)  
 
-Diese kopieren wir und raus, und bearbeiten  dann unser "credentials" File welches sich im versteckten ordner ".aws" befindet.
+Diese kopieren wir und raus und bearbeiten dann unser "credentials" File, welches sich im versteckten ordner ".aws" befindet.
 
 Mit einem Texteditor wie Nano oder einem ähnlichen Editor pasten wir unsere Credentials rein.
 
@@ -74,12 +76,12 @@ Mit folgendem Befehl lässt sich überprüfen, ob die Installation erfolgreich w
 ```bash
 aws --version
 ```
-Zum Testen ob es wir es richtig konfiguriert haben, können wir mit:
+Mit folgendem Befehl lässt sich testen, ob wir es richtig konfiguriert haben.
 
 ```
 aws s3 ls
 ```
-unsere Buckets aufzählen lassen, sollten wir keine haben, wird einfch eine leere Ausgabe gemacht.
+Damit werden unsere Buckets aufgezählt, sollten wir keine haben, wird einfch eine leere Ausgabe erscheinen.
 
 ![aws_credentials](images/buckets_sind_da.png)
 ---
@@ -174,7 +176,20 @@ Im nächsten Schritt wird das CSV-File zu einem JSON-File konvertiert und in den
 
 Danach downloadet es für uns die fertige JSON-Datei namens "test1.json" und das Skript zeigt und schon die Datei mir korrekter Syntax an.
 
+
+
 ![aws_credentials](images/script_explained.png)
 
+Nun könne wir noch validieren, ob das Skript wirklich alles gemacht hat:
 
+Als erstes listen wir unsere Buckets auf:
 
+![aws_credentials](get_buckets.png)
+
+Wie wir sehen wurden unsere Buckets erfolgreich hinzugefügt.
+
+Nun validieren wir noch unsere Funktion, hierbei können wir den Namen aus dem Skript entnehmen und die Region noch auf "us-east-1" eingrenzen.
+
+![aws_credentials](get_function.png)
+
+Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden und funktioniert so wie es sollte
