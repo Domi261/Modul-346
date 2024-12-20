@@ -192,3 +192,19 @@ Nun validieren wir noch unsere Funktion, hierbei können wir den Namen aus dem S
 ![aws_credentials](images/get_function.png)
 
 Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden und funktioniert so wie es sollte.
+
+
+
+#### 5. **Reflexion**
+Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
+
+**Reflexion Dominick**
+
+Als wir das Projekt durchführten, stießen wir auf einige Schwierigkeiten. So war es beispielsweise unklar, ob das Skript ohne manuelles Konfigurieren der ARN lauffähig ist, da diese je nach Nutzer unterschiedlich ist. Außerdem haben wir zunächst alle Änderungen in ein Test-Repository gepusht und erst am Ende in das finale Abgabe-Repository übertragen. Dieser zusätzliche Schritt hat unnötig Zeit gekostet, die wir uns durch eine bessere Planung im Vorfeld hätten sparen können. Bei einem logischen Problem im Ablauf des Skripts konnte uns Herr Dall Acqua unterstützen, sodass wir den Fehler letztendlich beheben konnten.
+
+Rückblickend haben wir viel dazugelernt, insbesondere im Umgang mit AWS, Linux und der gesamten AWS-Infrastruktur. Wir haben erkannt, dass sich Python sehr gut für Skripte und automatisierte Abläufe eignet, und trotzdem sind wir mit unserem Bash-Skript zufrieden, da es am Ende seine Aufgabe erfüllt. Für zukünftige Projekte nehmen wir uns vor, mehr Zeit für die Planung aufzuwenden und die Aufgaben effizienter zu gestalten. Zudem dachten wir, dass die Dokumentation weniger zeitaufwendig sein würde, doch insbesondere das Erstellen der Screenshots hat deutlich mehr Zeit in Anspruch genommen als erwartet. Insgesamt sind wir mit dem Ergebnis zufrieden und spüren deutlich, wie wir unser Fachwissen erweitern konnten.
+
+**Reflexion Alex**
+
+
+
