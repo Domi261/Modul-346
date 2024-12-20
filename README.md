@@ -133,7 +133,26 @@ Es ist wichtig zu beachten, dass alle unsere Files sich im gleichen Verzeichnis 
 
 ![aws_credentials](images/all_in_dir.png)
 
-- **Im ersten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.**
+- **Im ersten Schritt muss der Role ARN (Amazon Resource Name) geändert werden **
+Der Grund, warum jeder Nutzer oder jede Umgebung eine individuelle Role ARN benötigt, liegt darin, dass Rollen an bestimmte AWS-Konten, Berechtigungen und Sicherheitsrichtlinien gebunden sind.
+
+Der Role ARN kann im IAM-Dashboard eingesehen werden.
+
+Dafür geht man ins IAM-Dashboard Rein
+
+Beim Reiter Zugriffsverwaltung kann man dann auf "Rollen" klicken.
+
+Nun werden sämtliche Rollen angezeigt.
+
+Dann klickt man auf die "Lab Role"
+
+Nun sieht man den ARN
+
+Diesen muss man rauskopieren und dann mit einem Texteditor wie Nano in das File csvtojson.sh einfügen.
+
+
+
+- **Im zweiten Schritt müsen wir unsere Lambda Function "lambda_function.py" zippen.**
 
 Dies machen wir mit folgendem Befehl:
 
