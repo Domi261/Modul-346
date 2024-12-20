@@ -247,6 +247,30 @@ Insgesamt sind wir mit den Testergebnissen sehr zufrieden. Die Tests haben uns b
 
 ![CSV_to_JSON_Process_Professional_Diagram](https://github.com/user-attachments/assets/ff5e01e7-58b1-437b-b0c9-b9e81509b588)
 
+
+#### **Reflexion**
+Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
+
+## **Reflexion Dominick**
+
+Als wir das Projekt durchführten, stießen wir auf einige Schwierigkeiten. So war es beispielsweise unklar, ob das Skript ohne manuelles Konfigurieren der ARN lauffähig ist, da diese je nach Nutzer unterschiedlich ist. Außerdem haben wir zunächst alle Änderungen in ein Test-Repository gepusht und erst am Ende in das finale Abgabe-Repository übertragen. Dieser zusätzliche Schritt hat unnötig Zeit gekostet, die wir uns durch eine bessere Planung im Vorfeld hätten sparen können. Bei einem logischen Problem im Ablauf des Skripts konnte uns Herr Dall Acqua unterstützen, sodass wir den Fehler letztendlich beheben konnten.
+
+Rückblickend haben wir viel dazugelernt, insbesondere im Umgang mit AWS, Linux und der gesamten AWS-Infrastruktur. Wir haben erkannt, dass sich Python sehr gut für Skripte und automatisierte Abläufe eignet, und trotzdem sind wir mit unserem Bash-Skript zufrieden, da es am Ende seine Aufgabe erfüllt. Für zukünftige Projekte nehmen wir uns vor, mehr Zeit für die Planung aufzuwenden und die Aufgaben effizienter zu gestalten. Zudem dachten wir, dass die Dokumentation weniger zeitaufwendig sein würde, doch insbesondere das Erstellen der Screenshots hat deutlich mehr Zeit in Anspruch genommen als erwartet. Insgesamt sind wir mit dem Ergebnis zufrieden und spüren deutlich, wie wir unser Fachwissen erweitern konnten.
+
+
+## **Reflexion Alex**
+
+Als ich den Code geschrieben habe, stellte sich vor allem die Handhabung der dynamischen Output-Bucket-Namen als äusserst knifflig heraus. Da das Skript aufgeteilt ist – in eine lambda_function.py und ein csvtojson.sh – mussten wir sicherstellen, dass beide Teile genau wissen, welcher Input-Bucket zu welchem Output-Bucket gehört. Dieser Abgleich war nicht trivial, weil die Informationen aus einem Skript ins andere übertragen und korrekt verarbeitet werden mussten. Die Koordination der beiden Skripte hat deutlich mehr Zeit in Anspruch genommen, als ich anfangs erwartet hatte.
+Auch der Umgang mit den ARN-Rollen war eine Herausforderung, da diese bei jedem Nutzer unterschiedlich sind und entsprechend dynamisch verarbeitet werden müssen. Hier half es mir, "out-of-the-box" zu denken und ein paar unkonventionelle Lösungsansätze auszuprobieren, um schliesslich eine robuste Lösung zu finden. Insgesamt habe ich durch diese Schwierigkeiten eine Menge über die Feinheiten von AWS und die Bedeutung sauberer Schnittstellen zwischen verschiedenen Code-Bestandteilen gelernt. Rückblickend hätte ich an manchen Stellen mehr Zeit für die Planung investieren sollen, um solche Komplikationen zu reduzieren. Nichtsdestotrotz bin ich am Ende zufrieden damit, was wir erreicht haben, und weiss, dass ich diese Erfahrungen in zukünftige Projekte einbringen kann.
+
+## **Reflexion Louis**
+
+Während des Projekts sind wir auf verschiedene Herausforderungen gestoßen, die uns wichtige Erkenntnisse gebracht haben. Der Umgang mit mehreren Repositories führte dazu, dass anfängliche Commits verloren gingen, was die Arbeit weniger transparent machte. Dies zeigte uns, wie wichtig eine einheitliche Struktur und klare Planung in der Versionsverwaltung ist.
+Ein weiteres Problem war die manuelle Konfiguration der ARN, die je nach Nutzer individuell ist. Hier wurde uns bewusst, dass automatisierte Lösungen Zeit und Aufwand sparen könnten.
+Trotz dieser Hürden konnten wir viel lernen, insbesondere über AWS, Linux und Automatisierung mit Skripten. Unser Bash-Skript erfüllte die Anforderungen zuverlässig, und wir konnten unser technisches Wissen deutlich erweitern.
+Für zukünftige Projekte nehmen wir uns vor, die Planungsphase sorgfältiger zu gestalten und mehr Zeit für Dokumentation und Tests einzuplanen. Insgesamt sind wir mit dem Ergebnis zufrieden und fühlen uns gut vorbereitet für kommende Herausforderungen.
+
+
 ## Quellen
 
 1. **AWS CLI Dokumentation**  
@@ -284,30 +308,6 @@ Insgesamt sind wir mit den Testergebnissen sehr zufrieden. Die Tests haben uns b
 9. **Linux-Umgebungen und Pip-Installation**  
    *Schritte zur Installation und Verwaltung von Python-Paketen unter Linux:*  
    [https://pip.pypa.io/en/stable/installation/](https://pip.pypa.io/en/stable/installation/)
-
-
-#### **Reflexion**
-Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
-
-## **Reflexion Dominick**
-
-Als wir das Projekt durchführten, stießen wir auf einige Schwierigkeiten. So war es beispielsweise unklar, ob das Skript ohne manuelles Konfigurieren der ARN lauffähig ist, da diese je nach Nutzer unterschiedlich ist. Außerdem haben wir zunächst alle Änderungen in ein Test-Repository gepusht und erst am Ende in das finale Abgabe-Repository übertragen. Dieser zusätzliche Schritt hat unnötig Zeit gekostet, die wir uns durch eine bessere Planung im Vorfeld hätten sparen können. Bei einem logischen Problem im Ablauf des Skripts konnte uns Herr Dall Acqua unterstützen, sodass wir den Fehler letztendlich beheben konnten.
-
-Rückblickend haben wir viel dazugelernt, insbesondere im Umgang mit AWS, Linux und der gesamten AWS-Infrastruktur. Wir haben erkannt, dass sich Python sehr gut für Skripte und automatisierte Abläufe eignet, und trotzdem sind wir mit unserem Bash-Skript zufrieden, da es am Ende seine Aufgabe erfüllt. Für zukünftige Projekte nehmen wir uns vor, mehr Zeit für die Planung aufzuwenden und die Aufgaben effizienter zu gestalten. Zudem dachten wir, dass die Dokumentation weniger zeitaufwendig sein würde, doch insbesondere das Erstellen der Screenshots hat deutlich mehr Zeit in Anspruch genommen als erwartet. Insgesamt sind wir mit dem Ergebnis zufrieden und spüren deutlich, wie wir unser Fachwissen erweitern konnten.
-
-
-## **Reflexion Alex**
-
-Als ich den Code geschrieben habe, stellte sich vor allem die Handhabung der dynamischen Output-Bucket-Namen als äusserst knifflig heraus. Da das Skript aufgeteilt ist – in eine lambda_function.py und ein csvtojson.sh – mussten wir sicherstellen, dass beide Teile genau wissen, welcher Input-Bucket zu welchem Output-Bucket gehört. Dieser Abgleich war nicht trivial, weil die Informationen aus einem Skript ins andere übertragen und korrekt verarbeitet werden mussten. Die Koordination der beiden Skripte hat deutlich mehr Zeit in Anspruch genommen, als ich anfangs erwartet hatte.
-Auch der Umgang mit den ARN-Rollen war eine Herausforderung, da diese bei jedem Nutzer unterschiedlich sind und entsprechend dynamisch verarbeitet werden müssen. Hier half es mir, "out-of-the-box" zu denken und ein paar unkonventionelle Lösungsansätze auszuprobieren, um schliesslich eine robuste Lösung zu finden. Insgesamt habe ich durch diese Schwierigkeiten eine Menge über die Feinheiten von AWS und die Bedeutung sauberer Schnittstellen zwischen verschiedenen Code-Bestandteilen gelernt. Rückblickend hätte ich an manchen Stellen mehr Zeit für die Planung investieren sollen, um solche Komplikationen zu reduzieren. Nichtsdestotrotz bin ich am Ende zufrieden damit, was wir erreicht haben, und weiss, dass ich diese Erfahrungen in zukünftige Projekte einbringen kann.
-
-## **Reflexion Louis**
-
-Während des Projekts sind wir auf verschiedene Herausforderungen gestoßen, die uns wichtige Erkenntnisse gebracht haben. Der Umgang mit mehreren Repositories führte dazu, dass anfängliche Commits verloren gingen, was die Arbeit weniger transparent machte. Dies zeigte uns, wie wichtig eine einheitliche Struktur und klare Planung in der Versionsverwaltung ist.
-Ein weiteres Problem war die manuelle Konfiguration der ARN, die je nach Nutzer individuell ist. Hier wurde uns bewusst, dass automatisierte Lösungen Zeit und Aufwand sparen könnten.
-Trotz dieser Hürden konnten wir viel lernen, insbesondere über AWS, Linux und Automatisierung mit Skripten. Unser Bash-Skript erfüllte die Anforderungen zuverlässig, und wir konnten unser technisches Wissen deutlich erweitern.
-Für zukünftige Projekte nehmen wir uns vor, die Planungsphase sorgfältiger zu gestalten und mehr Zeit für Dokumentation und Tests einzuplanen. Insgesamt sind wir mit dem Ergebnis zufrieden und fühlen uns gut vorbereitet für kommende Herausforderungen.
-
 
 
 
