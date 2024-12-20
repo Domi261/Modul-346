@@ -238,6 +238,9 @@ Die Durchführung des Skripts hat erfolgreich funktioniert, alles ist vorhanden 
 | 9              | Test mit großer CSV-Datei (>10 MB)        | Verarbeitung dauert länger, bleibt stabil      | JSON korrekt erstellt                          | ✅ Bestanden | Keine                             |
 | 10             | End-to-End-Test                          | CSV wird zu JSON, ohne Fehler                  | Alle Schritte erfolgreich durchlaufen          | ✅ Bestanden | Keine                             |
 
+Die durchgeführten Tests haben gezeigt, dass unser Skript zuverlässig funktioniert und die gewünschten Anforderungen erfüllt. Wir haben verschiedene Szenarien überprüft, darunter die Verarbeitung von CSV-Dateien, die korrekte Triggerung der Lambda-Funktion sowie den Umgang mit fehlerhaften oder leeren Dateien. Besonders erfreulich war, dass das Skript auch bei größeren Datenmengen stabil blieb und die JSON-Ausgabe korrekt erstellt wurde.
+
+Insgesamt sind wir mit den Testergebnissen sehr zufrieden. Die Tests haben uns bestätigt, dass die entwickelte Lösung robust und vielseitig einsetzbar ist. Für zukünftige Projekte nehmen wir mit, dass eine strukturierte Testphase nicht nur die Qualität sichert, sondern auch das Vertrauen in das eigene Produkt stärkt.
 
 #### **Ablaufprozess**
 
