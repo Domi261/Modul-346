@@ -1,1 +1,3 @@
+# Autor: Alex Shahini
+# Datum: 20.12.2024
 boto3
