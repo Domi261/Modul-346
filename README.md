@@ -247,6 +247,44 @@ Insgesamt sind wir mit den Testergebnissen sehr zufrieden. Die Tests haben uns b
 
 ![CSV_to_JSON_Process_Professional_Diagram](https://github.com/user-attachments/assets/ff5e01e7-58b1-437b-b0c9-b9e81509b588)
 
+## Quellen
+
+1. **AWS CLI Dokumentation**  
+   *Offizielle Dokumentation zur Installation, Konfiguration und Nutzung der AWS CLI:*  
+   [https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html)
+
+2. **Python-Entwicklung mit boto3**  
+   *Ein Leitfaden zur Arbeit mit der AWS Python SDK "boto3" für Automatisierungen:*  
+   [https://boto3.amazonaws.com/v1/documentation/api/latest/index.html](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+3. **Best Practices für IAM-Rollen und Berechtigungen**  
+   *Wie man IAM-Rollen korrekt erstellt und verwendet, um Sicherheit und Effizienz zu gewährleisten:*  
+   [https://aws.amazon.com/iam/](https://aws.amazon.com/iam/)
+
+4. **Bash-Skripting Grundlagen**  
+   *Einführung in das Erstellen von automatisierten Skripten unter Linux:*  
+   [https://linuxconfig.org/bash-scripting-tutorial-for-beginners](https://linuxconfig.org/bash-scripting-tutorial-for-beginners)
+
+5. **JSON-Format-Spezifikation**  
+   *Offizielle Beschreibung des JSON-Formats, das für den Datenaustausch genutzt wird:*  
+   [https://www.json.org/json-en.html](https://www.json.org/json-en.html)
+
+6. **Dynamisches S3-Bucket-Management**  
+   *AWS-Ressourcen zur dynamischen Benennung und Verwaltung von S3-Buckets:*  
+   [https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)
+
+7. **Effektives Debugging in AWS Lambda**  
+   *Hilfreiche Ansätze zur Fehlerbehebung in AWS Lambda-Funktionen:*  
+   [https://aws.amazon.com/lambda/](https://aws.amazon.com/lambda/)
+
+8. **Planung und Durchführung von Softwareprojekten**  
+   *Best Practices für die effiziente Planung und Ausführung von Projekten:*  
+   [https://pmtraining.com/blog/software-project-planning](https://pmtraining.com/blog/software-project-planning)
+
+9. **Linux-Umgebungen und Pip-Installation**  
+   *Schritte zur Installation und Verwaltung von Python-Paketen unter Linux:*  
+   [https://pip.pypa.io/en/stable/installation/](https://pip.pypa.io/en/stable/installation/)
+
 
 #### **Reflexion**
 Am Ende jeder Arbeit ist eine sorgfältige Reflexion von großer Bedeutung. Sie ermöglicht es, Erfolge wie auch Schwierigkeiten zu erkennen, aus Erfahrungen zu lernen und so die nächste Aufgabe noch besser anzugehen. Eine ehrliche Analyse des eigenen Vorgehens schafft Klarheit, motiviert zur Weiterentwicklung und trägt langfristig zu einer höheren Qualität der Ergebnisse bei.
